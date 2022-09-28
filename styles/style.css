@@ -31,13 +31,13 @@
 .logo_place_header {
   background-image: url(../images/logo_place_header.svg);
   top: 32px;
-  margin-left: 64px;
+  left: 64px;
   position: absolute;
 }
 
 .header__title {
   font-size: 102px;
-  font-weight: bolder;
+  font-weight: bold;
   line-height: 96px;
   max-width: 730px;
   width: 100%;
@@ -52,9 +52,13 @@
   line-height: 25px;
   max-width: 388px;
   width: 100%;
-  bottom: 30px;
+  bottom: 30px; /* top: calc(100% - 75px - 30px); я могу отписать это таким образом, 
+   но нет свойства, которое бы определило высоту блока "header__subtitle" и если высота блока будет меняться,
+  то верстка поедет. Поэтому использовала bottom: 30px; */
+  left: 64px;
   position: absolute;
-  margin: 0 auto 0 64px;
+  margin-top: 0;
+  margin-bottom: 0;
   z-index: 3;
 }
 
@@ -67,13 +71,13 @@
 }
 
 .header__main-illustration {
-  max-width: 765px;
+  width: 765px;
   max-height: 608px;
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 2;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .header__square-pic {
@@ -127,8 +131,8 @@
   line-height: 34px;
 }
 
-.two-columns__paragraph-bottom {
-  margin: 0 auto 0px;
+.two-columns__paragraph:last-child {
+  margin: 0 auto 0;
 }
 
 .digits {
@@ -174,7 +178,7 @@
 }
 
 .table__heading {
-  margin: 0 0 20px 0;
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
@@ -188,7 +192,7 @@
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   position: relative;
   display: flex;
   background-color: #f2f2f2;
@@ -238,32 +242,33 @@
   overflow: hidden;
 }
 
-.section-title_theme-dark {
+.section-title_theme_dark {
   margin: 90px auto 20px;
   color: white;
 }
 
-.section-subtitle_theme-dark {
+.section-subtitle_theme_dark {
   color: white;
 }
 
-.table_theme-dark {
+.table_theme_dark {
   margin: 0 auto 90px auto;
 }
 
-.table__cell_theme-dark {
+.table__cell_theme_dark {
   width: 200px;
-  margin: 80px auto 0;
+  margin: 80px 0 0 0;
 }
 
-.table__heading_theme-dark {
+.table__heading_theme_dark {
   color: white;
 }
 
-.kaufman_triangle {
+.kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
   right: -210px;
+  top: 0;
   z-index: -1;
   width: 877px;
   height: 877px;
@@ -272,13 +277,12 @@
 
 .table_heading_theme_dark {
   margin-top: 0;
-  margin-bottom: 20px;
   font-size: 24px;
   font-weight: bolder;
   line-height: 1.15;
 }
 
-.table__text_theme-dark {
+.table__text_theme_dark {
   margin: 0 auto 0 auto;
   color: white;
 }
@@ -292,6 +296,7 @@
   padding-bottom: 40px;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -360,5 +365,7 @@
 }
 
 .footer__social-icon {
+  width: 16px;
+  min-height: 16px;
   margin: 0 10px 0 0;
 }
