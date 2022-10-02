@@ -1,9 +1,0 @@
-.cards__item {
-   margin-top: 60px;
-   margin-right: 100px;
-   width: 240px; /*  размер изображения, + отступы  */
-}
-.cards__item:nth-child(3) { /* использовала псевдо класс https://developer.mozilla.org/ru/docs/Web/CSS/:nth-child */
-    margin-top: 60px;
-    margin-right: 0;
-}  
