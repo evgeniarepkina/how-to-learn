@@ -1,10 +1,15 @@
 .feynman__link {
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 51px;
-    position: absolute;
-    top: 50%;
-    right: 48px; /* не смогла описать в рамках одного margin, поэтому описала в двух строках */
-    color: #2f80ed;
-    text-decoration: none;
-  }
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 51px;
+  position: absolute;
+  top: 50%;
+  right: 48px; /* не смогла описать в рамках одного margin, поэтому описала в двух строках */
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.feynman__link:hover {
+  transition: opacity .2s ease;
+  opacity: 0.6;
+}

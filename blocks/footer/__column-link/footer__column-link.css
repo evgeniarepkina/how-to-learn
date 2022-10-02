@@ -1,6 +1,11 @@
 .footer__column-link {
-    font-size: 18px;
-    font-weight: normal;
-    color: white;
-    text-decoration: none;
-  }
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+}
+
+.footer__column-link:hover {
+  transition: opacity .6s ease;
+  opacity: 0.6;
+ }
