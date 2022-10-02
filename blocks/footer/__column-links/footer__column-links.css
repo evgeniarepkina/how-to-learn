@@ -10,6 +10,7 @@
   margin: 0 0 16px 0;
 }
 
-.footer__column-links {
+.footer__column-links:hover {
+  transition: opacity .6s ease;
   opacity: 0.6;
 }
